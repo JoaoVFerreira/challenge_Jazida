@@ -6,7 +6,7 @@ const Sequelize = require('sequelize');
 const process = require('process');
 const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
-const sequelizeConfig = require('../shared/infra/sequelize/dataBaseConnection');
+const sequelizeConfig = require('../shared/infra/sequelize/dataBaseConfig');
 const config = sequelizeConfig[env]
 const db = {};
 
