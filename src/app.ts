@@ -4,7 +4,7 @@ import express from 'express';
 import 'reflect-metadata';
 import cors from 'cors';
 import { ErrorHandler } from '$errors/GlobalErrorHandler';
-// import './shared/container';
+import './shared/container';
 
 const app = express();
 
