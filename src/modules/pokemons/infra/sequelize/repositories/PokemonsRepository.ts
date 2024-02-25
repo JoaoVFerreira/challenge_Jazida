@@ -8,6 +8,11 @@ export class PokemonsRepository implements IPokemonsRepository {
     private readonly Model: typeof PokemonModel = model.pokemons,
   ) {}
 
+  public async create({ trainer, type, level }: { trainer: string; type: string; level: number; }): Promise<PokemonEntity> {
+    const pokemon = await this.Model.create({ trainer, type, level });
+    return new PokemonEntity(pokemon);
+  }
+
   public async getOne({ id }: { id: number; }): Promise<PokemonEntity> {
     const pokemon = await this.Model.findOne({ where: { id } });
     return pokemon ? new PokemonEntity(pokemon) : null;
