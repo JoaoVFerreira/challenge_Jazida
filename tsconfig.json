@@ -1,14 +1,15 @@
 {
   "compilerOptions": {
     "incremental": true,
-    "target": "es2016",
+    "target": "ES2017",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
+    "noEmitOnError": true,
     "module": "commonjs",
-    "outDir": "./",
+    "outDir": "./dist",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "strict": true,
+    "useDefineForClassFields": true,
     "skipLibCheck": true
   },
   "paths": {
