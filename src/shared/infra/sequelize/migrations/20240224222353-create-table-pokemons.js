@@ -16,7 +16,6 @@ module.exports = {
           },
           tipo: {
             type: Sequelize.STRING,
-            unique: true,
             allowNull: false
           },
           treinador: Sequelize.STRING,
