@@ -1,7 +1,7 @@
 import model from '$models';
 import { PokemonModel } from '$models/PokemonModel';
 import { IPokemonsRepository } from '$modules/pokemons/domain/repositories/IPokemonsRepository'
-import { PokemonEntity } from '../../../domain/entities/PokemonEntity';
+import { PokemonEntity } from '$modules/pokemons/domain/entities/PokemonEntity';
 
 export class PokemonsRepository implements IPokemonsRepository {
   constructor(
@@ -9,7 +9,12 @@ export class PokemonsRepository implements IPokemonsRepository {
   ) {}
 
   public async create({ trainer, type, level }: { trainer: string; type: string; level: number; }): Promise<PokemonEntity> {
-    const pokemon = await this.Model.create({ trainer, type, level });
+    const pokemonToCreate = {
+      treinador: trainer,
+      tipo: type,
+      nivel: level
+    };
+    const pokemon = await this.Model.create(pokemonToCreate);
     return new PokemonEntity(pokemon);
   }
 
@@ -20,7 +25,7 @@ export class PokemonsRepository implements IPokemonsRepository {
 
   public async update({ id, trainer }: { id: number; trainer: string; }): Promise<PokemonEntity> {
     const pokemon = await this.Model.findOne({ where: { id } });
-    const pokemonUpdated = await pokemon.update({ id, trainer });
+    const pokemonUpdated = await pokemon.update({ id, treinador: trainer });
     return new PokemonEntity(pokemonUpdated.dataValues);
   };
 

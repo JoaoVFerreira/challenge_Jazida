@@ -10,7 +10,6 @@ export interface IHttpRequest<T extends IHttpRequest<any> = any> {
   body?: T['body'];
   headers?: T['headers'];
   files?: any;
-  user?: number;
   request?: any;
   clientIps?: string[];
   userAgent?: any;
