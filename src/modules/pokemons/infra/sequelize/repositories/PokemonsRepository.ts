@@ -30,8 +30,7 @@ export class PokemonsRepository implements IPokemonsRepository {
   };
 
   public async delete({ id }: { id: number; }): Promise<void> {
-    const pokemon = await this.Model.findOne({ where: { id } });
-    await pokemon.destroy();
+    await this.Model.destroy({ where: { id } });
   };
 
   public async getAll(): Promise<PokemonEntity[]> {
