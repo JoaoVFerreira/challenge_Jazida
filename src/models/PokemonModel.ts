@@ -7,7 +7,6 @@ export class PokemonModel extends Model {
   declare nivel: number;
   declare readonly created_at: Date;
   declare readonly updated_at: Date;
-  declare readonly deleted_at?: Date;
 
   static notHistory: boolean;
 }
