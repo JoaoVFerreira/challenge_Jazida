@@ -1,6 +1,6 @@
 import defaultCheckValidator from '$shared/infra/http/validators/DefaultValidator';
 import { NextFunction, Request, Response } from 'express';
-import { body, ValidationChain } from 'express-validator';
+import { body, ValidationChain, param } from 'express-validator';
 import { ValidationError } from '$errors/ValidationError'
 
 const defaultValidator = (req: Request, res: Response, next: NextFunction): ValidationChain => 
@@ -32,5 +32,11 @@ const createPokemonValidator = [
   defaultValidator
 ];
 
-export { createPokemonValidator };
+const pokemonIdValidator = [
+  param('pokemonId')
+  .isInt({ gt: 0 })
+  .withMessage('pokemonId deve ser um valor inteiro maior que zero!'),
+];
+
+export { createPokemonValidator, pokemonIdValidator };
 
