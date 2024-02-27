@@ -23,9 +23,9 @@ export class PokemonsRepository implements IPokemonsRepository {
     return pokemon ? new PokemonEntity(pokemon) : null;
   };
 
-  public async update({ id, trainer }: { id: number; trainer: string; }): Promise<PokemonEntity> {
+  public async update({ id, trainer, level }: { id: number; trainer?: string; level?: number }): Promise<PokemonEntity> {
     const pokemon = await this.Model.findOne({ where: { id } });
-    const pokemonUpdated = await pokemon.update({ id, treinador: trainer });
+    const pokemonUpdated = await pokemon.update({ id, treinador: trainer, nivel: level });
     return new PokemonEntity(pokemonUpdated.dataValues);
   };
 

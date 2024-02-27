@@ -6,9 +6,14 @@ import { CreatePokemonUseCase } from '$modules/pokemons/application/useCases/Cre
 import { GetOnePokemonUseCase } from '$modules/pokemons/application/useCases/GetOnePokemonUseCase';
 import { DeletePokemonUseCase } from '$modules/pokemons/application/useCases/DeletePokemonUseCase';
 import { GetAllPokemonsUseCase } from '$modules/pokemons/application/useCases/GetAllPokemonsUseCase';
+import { UpdatePokemonUseCase } from '$modules/pokemons/application/useCases/UpdatePokemonUseCase';
+import { BattlePokemonUseCase } from '$modules/pokemons/application/useCases/BattlePokemonUseCase';
 
 container.registerSingleton<IPokemonsRepository>('PokemonsRepository', PokemonsRepository);
 container.registerSingleton<IUseCase>('CreatePokemonUseCase', CreatePokemonUseCase);
 container.registerSingleton<IUseCase>('GetOnePokemonUseCase', GetOnePokemonUseCase);
 container.registerSingleton<IUseCase>('DeletePokemonUseCase', DeletePokemonUseCase);
 container.registerSingleton<IUseCase>('GetAllPokemonsUseCase', GetAllPokemonsUseCase);
+container.registerSingleton<IUseCase>('UpdatePokemonUseCase', UpdatePokemonUseCase);
+container.registerSingleton<IUseCase>('BattlePokemonUseCase', BattlePokemonUseCase);
+

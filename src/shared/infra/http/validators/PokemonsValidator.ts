@@ -9,7 +9,7 @@ const defaultValidator = (req: Request, res: Response, next: NextFunction): Vali
 const checkStarterPokemons = (): ValidationChain => {
   return body().custom((_, { req }) => {
     const starterPokemons = ['charizard', 'mewtwo', 'pikachu'];
-    if (starterPokemons.includes(req.body?.tipo) && req.body?.nivel !== 1) {
+    if (starterPokemons.includes(req.body?.tipo?.toLowerCase()) && req.body?.nivel !== 1) {
       throw new ValidationError(`Os seguintes pokemons iniciais ${starterPokemons.join(', ')} devem ser de nivel 1.`);
     }
     return true;
@@ -38,5 +38,13 @@ const pokemonIdValidator = [
   .withMessage('pokemonId deve ser um valor inteiro maior que zero!'),
 ];
 
-export { createPokemonValidator, pokemonIdValidator };
+const updatePokemonValidator = [
+  body('treinador')
+    .notEmpty()
+    .isString()
+  .withMessage('Treinador deve ser uma string não vazia!'),
+  defaultValidator
+];
+
+export { createPokemonValidator, pokemonIdValidator, updatePokemonValidator };
 
