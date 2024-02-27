@@ -10,15 +10,16 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "useDefineForClassFields": true,
-    "skipLibCheck": true
-  },
-  "paths": {
-    "$app": ["./src/app.js"],
-    "$models/*": ["./src/models/*"],
-    "$test/*": ["./__tests__/*"],
-    "$errors/*": ["./src/errors/*"],
-    "$shared/*": ["./src/shared/*"],
-    "$modules/*": ["./src/modules/*"],
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "$app": ["./src/app.js"],
+      "$models/*": ["./src/models/*"],
+      "$test/*": ["./__tests__/*"],
+      "$errors/*": ["./src/errors/*"],
+      "$shared/*": ["./src/shared/*"],
+      "$modules/*": ["./src/modules/*"],
+    }
   },
   "include": [
     "src/**/*",
