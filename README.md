@@ -23,4 +23,4 @@
 ### Instruções para executar os testes;
 
 1.  Execute ````npx jest````;
-2.  Caso os testes de integração falhem, execute-os separadamente, isto é, por arquivo; Erros podem acontecem por conta da assincronicidade;
+2.  Caso os testes de integração falhem, execute-os separadamente, isto é, por arquivo; Erros podem acontecer por conta da assincronicidade;
