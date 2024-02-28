@@ -36,6 +36,7 @@ const pokemonIdValidator = [
   param('pokemonId')
   .isInt({ gt: 0 })
   .withMessage('pokemonId deve ser um valor inteiro maior que zero!'),
+  defaultValidator
 ];
 
 const updatePokemonValidator = [
