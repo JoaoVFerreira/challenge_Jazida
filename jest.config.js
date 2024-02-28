@@ -16,5 +16,9 @@ module.exports = {
     "\\$shared/(.*)": "<rootDir>/src/shared/$1",
     "\\$modules/(.*)": "<rootDir>/src/modules/$1",
   },
-  setupFilesAfterEnv: ['<rootDir>/__tests__/jest.setup.ts']
+  setupFilesAfterEnv: ['<rootDir>/__tests__/jest.setup.ts'],
+  testPathIgnorePatterns: [
+    "<rootDir>/__tests__/jest.setup.ts",
+    "<rootDir>/__tests__/unit/modules/pokemons/inMemory/PokemonsRepositoryInMemory.ts"
+  ]
 };
