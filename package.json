@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --watch \"src\" --exec \"ts-node src/index.ts\" -e ts",
-    "test:watch": "yarn test --watch",
-    "test:push": "yarn test --coverage",
+    "test:unit": "jest __tests__/unit",
     "postinstall": "link-module-alias"
   },
   "_moduleAliases": {

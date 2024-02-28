@@ -1,0 +1,228 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2024-02-28T19:21:57.928Z",
+  "__export_source": "insomnia.desktop.app:v2023.5.8",
+  "resources": [
+    {
+      "_id": "req_7c49e8b3598a48ef94861f8f16b3cb2a",
+      "parentId": "wrk_fb0f029073cd4c7399f6270305bb942e",
+      "modified": 1709146120960,
+      "created": 1708992250839,
+      "url": "{{ _.baseURL }}/batalhar/13/14",
+      "name": "/batalhar/:pokemonIdA/:pokemonIdB",
+      "description": "",
+      "method": "POST",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1708992250839,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "wrk_fb0f029073cd4c7399f6270305bb942e",
+      "parentId": null,
+      "modified": 1708900339120,
+      "created": 1708900339120,
+      "name": "Jazida",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_7b49db4a62d848148b9279d11ffde44a",
+      "parentId": "wrk_fb0f029073cd4c7399f6270305bb942e",
+      "modified": 1709141242294,
+      "created": 1708900601685,
+      "url": "{{ _.baseURL }}/pokemons",
+      "name": "/pokemons",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1708900601685,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_19b5cf63b77a47fc9de4e12988218fb7",
+      "parentId": "wrk_fb0f029073cd4c7399f6270305bb942e",
+      "modified": 1708919220111,
+      "created": 1708900417415,
+      "url": "{{ _.baseURL }}/pokemons/9",
+      "name": "/pokemons/:id",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1708900417415,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_e9685540a8b644aca3062503432804ec",
+      "parentId": "wrk_fb0f029073cd4c7399f6270305bb942e",
+      "modified": 1708919718069,
+      "created": 1708900416205,
+      "url": "{{ _.baseURL }}/pokemons/2",
+      "name": "/pokemons/:id",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1708900416205,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_8bbfb909600b4ce58a01d24132242a80",
+      "parentId": "wrk_fb0f029073cd4c7399f6270305bb942e",
+      "modified": 1708955059586,
+      "created": 1708900414791,
+      "url": "{{ _.baseURL }}/pokemons/12",
+      "name": "/pokemons/:id",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"treinador\": \"Luscão\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1708900414791,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_05ab3951252d4670a20b1ca67ce260d0",
+      "parentId": "wrk_fb0f029073cd4c7399f6270305bb942e",
+      "modified": 1709145492768,
+      "created": 1708900348532,
+      "url": "{{ _.baseURL }}/pokemons",
+      "name": "/pokemons",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"tipo\": \"pikachu\",\n\t\"treinador\": \"Dudu\",\n\t\"nivel\": 42\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1708900348533,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_85d12eb324870769e91169c50524f94085a92a6c",
+      "parentId": "wrk_fb0f029073cd4c7399f6270305bb942e",
+      "modified": 1708900402783,
+      "created": 1708900339124,
+      "name": "Base Environment",
+      "data": {
+        "baseURL": "localhost:3000"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "baseURL"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1708900339124,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_85d12eb324870769e91169c50524f94085a92a6c",
+      "parentId": "wrk_fb0f029073cd4c7399f6270305bb942e",
+      "modified": 1708900339125,
+      "created": 1708900339125,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    }
+  ]
+}

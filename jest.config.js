@@ -19,6 +19,8 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>/__tests__/jest.setup.ts'],
   testPathIgnorePatterns: [
     "<rootDir>/__tests__/jest.setup.ts",
-    "<rootDir>/__tests__/unit/modules/pokemons/inMemory/PokemonsRepositoryInMemory.ts"
+    "<rootDir>/__tests__/unit/modules/pokemons/inMemory/PokemonsRepositoryInMemory.ts",
+    "<rootDir>/__tests__/utils/db/TruncateDB.ts",
+    "<rootDir>/__tests__/utils/factory/PokemonFactory"
   ]
 };
